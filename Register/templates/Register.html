@@ -1,0 +1,41 @@
+{% extends 'base.html' %} 
+{% block content %} 
+
+<body>
+    <div class="ui fluid container-heading-register">
+        <div class="center-div"> 
+            <form class="ui form register-form">
+                <div class="field">
+                    <label id="register-label">First Name</label>
+                    <input placeholder="First Name..." type="text" id="firstname"/>
+                </div>
+                <div class="field">
+                    <label id="register-label">Last Name</label>
+                    <input placeholder="Last Name..." type="text" id="lastname"/>
+                </div>
+                <div class="field">
+                    <label id="register-label">Email Address</label>
+                    <input placeholder="Email..." type="email" id="email" />
+                </div>
+                <div class="field">
+                    <label id="register-label">Password</label>
+                    <input placeholder="Password..." type="password" id="password" />
+                </div>
+                <div class="field">
+                    <div class="ui checkbox checkbox-div">
+                        <input type="checkbox" class="checkbox-div" />
+                        <label id="register-label">I agree to the Terms and Conditions</label>
+                    </div>
+                </div>
+
+                <button class="ui button register-button" id="register-button" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <!-- Adding the javascript -->
+    <script src="{{ url_for('static', filename='Register/javascript/register.js')}}"></script>
+
+{% endblock %}
+</body>

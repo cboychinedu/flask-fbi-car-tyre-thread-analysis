@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<body>
+    <!-- Adding the main section  -->
+    <div>
+        <div class="ui fluid container-heading">
+            <div class="bg-image"> </div>
+            <div class="bg-text">
+                <div style="text-align: center;">
+                    <img src="{{ url_for('static', filename='Images/fbi-badge.png') }}" class="fbi-badge-image" alt="fbi-badge-image">
+                </div>
+                <div class="center-div">
+                    <form class="ui form">
+                        <div class="field">
+                            <label class="label-tag">Email Address </label>
+                            <input placeholder="Email Address... " id="email" class="email" />
+                        </div>
+                        <div class="field">
+                            <label class="label-tag"> Password </label>
+                            <input placeholder="Password..." type="password" id="password" class="password" />
+                        </div>
+                        <div class="field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" class="hidden" readonly="" tabindex="0"/>
+                                <label class="label-tag">I agree to the Terms and Conditions</label>
+                            </div>
+                        </div>
+                        <button class="ui button submit-button" type="submit" id="submit-btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adding the javascript -->
+    <script src="{{ url_for('static', filename='Home/javascript/home.js')}}"></script>
+
+{% endblock %}  
+</body>
+</html>

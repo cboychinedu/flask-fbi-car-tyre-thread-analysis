@@ -1,0 +1,15 @@
+# Environment variables
+.env 
+
+# Dataset 
+/dataset 
+
+# ML model 
+Dashboard/MachineLearningModel/finalized_model.sav
+/Dashboard/MachineLearningModel/finalized_model.sav
+
+# Logs 
+requests.log
+
+# python generated exec binaries 
+/__pycache__

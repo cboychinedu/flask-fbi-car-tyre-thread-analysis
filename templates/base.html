@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='Images/fbi.png')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Home/css/home.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+    <script src="{{ url_for('static', filename='Home/javascript/sweetAlert.js')}}"></script>
+    <title> Home </title>
+</head>
+<body>
+    <!-- Adding the navbar  -->
+    <div class="ui inverted segment navbar-container">
+        <div class="ui inverted secondary menu">
+            <nav class="left-nav">
+                <a href="/"> 
+                    <div>
+                        <img class="fbi-seal-image" src="{{ url_for('static', filename='Home/images/fbi.png')}}" alt="fbi-seal" srcset="">
+                    </div>
+                </a>
+                <a href="/" class="item"> Home </a>
+                <a href="#" class="item"> News Feed </a>
+                <a href="#" class="item"> Contact Us </a>
+                <a href="/register" class="item"> Register </a>
+
+            </nav>
+        </div>
+
+        <div class="ui inverted segment left-nav">
+            <div class="ui action input">
+                <input type="text" placeholder="Search..."/>
+                <button class="ui button">Search</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Content  -->
+    {% block content %} 
+    {% endblock %}  
+
+
+    <!-- Adding the footer  -->
+    <footer> 
+        <div class="ui inverted vertical footer segment footer-div">
+            <div class="ui container footer">
+              <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="three wide column">
+                  <ul class="ui inverted">
+                    <li class="list-items"> <h4 class="ui inverted header footer-header">About</h4> </li>
+                    <li class="list-items"> <a to="#" class="item sitemap">Mission & Priorities</a> </li>
+                    <li class="list-items"> <a to="#" class="item contact-us">Leadership & Structure</a> </li>
+                    <li class="list-items"> <a to="#" class="item"> Partnerships </a> </li>
+                    <li class="list-items"> <a to="#" class="item"> FAQs </a> </li>
+                  </ul>
+                </div>
+                <div class="three wide column">
+                  <ul class="ui inverted inner-footer">
+                    <li class="list-items"> <h4 class="ui inverted header footer-header"> What We Investigate </h4> </li>
+                    <li class="list-items"> <a to="#" class="item order"> Terrorism </a> </li>
+                    <li class="list-items"> <a to="#" class="item"> Counterintelligence </a> </li>
+                    <li class="list-items"> <a to="#" class="item"> Cyber Crime </a> </li>
+                    <li class="list-items"> <a to="#" class="item"> Civil Rights </a> </li>
+                    <li class="list-items"> <a to="#" class="item"> Organized Crime </a> </li>
+                    <li class="list-items"> <a to="#" class="item"> Violent Crime </a> </li>
+                  </ul>
+                </div>
+                <div class="seven wide column last-footer-div">
+                  <ul class="ui inverted inner-footer">
+                    <li class="list-items fbi-logo-and-header">
+                      <div>
+                        <img src="{{ url_for('static', filename='Images/fbi.png')}}" class="fbi-footer-logo-image" alt="fbi-footer-logo-image"/>
+                      </div>
+                      <h1 class="ui inverted header footer-header fbi-header">FBI</h1>
+                      <p class="fbi-bureau-para"> FEDERAL BUREAU <br/> OF INVESTIGATION </p>
+                    </li>
+                    <li class="list-items">
+                      <p class="fbi-contact-center"> FBI.gov Contact Center </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

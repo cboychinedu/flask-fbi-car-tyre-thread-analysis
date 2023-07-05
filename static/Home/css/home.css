@@ -1,0 +1,440 @@
+/* * {
+  font-family: 'Poppins';
+} */
+
+body {
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-family: 'Poppins';
+}
+#register-label {
+  font-size: 12px;
+}
+#email, #password, #firstname, 
+#lastname {
+  font-size: 13px;
+  color: #434242;
+}
+.ui.button.perform-analysis {
+  margin-top: -14px;
+  float: left;
+  background-color: #0b0b53;
+  color: white;
+  font-weight: bold;
+}
+.ui.button.perform-analysis:hover,
+.ui.button.perform-analysis:focus {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
+.ui.button.upload-input {
+  height: 38px;
+  width: 220px;
+  margin-top: 1px;
+}
+.ui.vertical.tabular.menu {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 460px;
+}
+.search-history {
+  margin: 42px;
+}
+.history-search-form {
+    height: 37px;
+    padding-left: 16px;
+    outline: none;
+    color: #575555;
+    font-size: 13px;
+    border-radius: 6px;
+    border: 1px solid #d5d2d2;
+}
+.ui.button.history-download-image {
+  margin-top: 20px;
+  background-color: blue;
+  color: white;
+  font-size: 11px;
+  width: 120px;
+}
+.ui.action.input.search-history {
+  margin: 20px;
+}
+.history-pagnation {
+  float: right;
+  margin-top: 14px;
+}
+.history-image-display {
+  width: 92%;
+  height: 94%;
+  padding-top: 12px;
+  padding-left: 12px;
+}
+.ui.segment.message-segment {
+  height: 440px;
+  display: flex;
+}
+.results-lists {
+  border: 2px solid #cfcfcf;
+  list-style-type: disclosure-closed;
+  padding-left: 13px;
+  border-radius: 5px;
+  margin: 7px;
+  font-size: 13px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.result-div {
+  background-color: #e8e8e84d;
+  width: 397px;
+  height: 340px;
+  padding: 17px;
+}
+.history-image-div {
+  height: 200px;
+  width: 200px;
+  margin-right: 10px;
+  background-color: #e0e0e063;
+}
+.history-container {
+    margin: auto;
+    margin-bottom: 316px;
+    width: 68%;
+    margin-left: 123px;
+    margin-top: 47px;
+
+}
+.database-error-image {
+  height: 67px;
+  width: 160px;
+}
+.error-div {
+  margin: auto;
+  margin-top: 100px;
+  width: 60%;
+  text-align: center;
+  height: 343px;
+  margin-bottom: 298px;
+  padding-top: 43px;
+}
+.error-heading {
+  font-size: 9rem;
+  font-weight: bolder;
+}
+.ui.button.error-search {
+  background: blue;
+}
+.error-form {
+  margin: auto;
+  margin-top: 20px;
+  width: 50%;
+  width: 30%;
+}
+.ui.inverted.segment.navbar-container {
+    padding-left: 40px;
+}
+.ui.inverted.segment.left-nav {
+    float: right;
+    margin-top: -65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 46px;
+}
+.ui.segment.dashboard-main-div {
+    border: none;
+    margin: auto;
+    width: 60%;
+    margin-left: 15px;
+    height: 100%;
+}
+.ui.segment.description-main-div {
+    width: 50%;
+}
+.upload-image {
+    max-width: 25%;
+}
+.ui.fluid.container-heading-register {
+  margin: auto;
+  width: 99%;
+  height: 776px;
+  margin-top: 40px;
+}
+.ui.fluid.container-heading {
+    margin: auto;
+    width: 59%;
+    height: 776px;
+    margin-top: 85px;
+     /* Add the blur effect */
+     /* filter: blur(8px);
+     -webkit-filter: blur(8px); */
+
+     /* Center and scale the image nicely */
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-image {
+    height: 85vh;
+    /* The image used */
+    background-image: url("../../Images/fbi_seal.jpeg");
+
+    /* Add the blur effect */
+    -webkit-filter: blur(10px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+  /* Position text in the middle of the page/image */
+.bg-text {
+    /* background-color: rgba(0,0,0, 0.4); */
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    height: 506px;
+    width: 47%;
+    padding: 20px;
+    border-radius: 20px;
+}
+.center-div {
+    height: auto;
+    display: flex;
+    height: 300px;
+    justify-content: space-around;
+}
+
+.ui.form .field>label.label-tag,
+.ui.checkbox input.hidden+label {
+    color: white;
+}
+.ui.button.submit-button {
+    width: 275px;
+    background: #0b0b53;
+    color: white;
+    font-weight: bold;
+}
+.fbi-seal-image {
+  height: 40px;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+.fbi-badge-image {
+    height: 143px;
+    width: 112px;
+}
+.left-nav {
+    margin-bottom: -16px;
+    display: flex;
+}
+input[type="file"] {
+    width: 87px;
+    height: 50px;
+}
+.ui.green.left.floated.button.green-button {
+  margin-top: 6px;
+}
+.upload-image-file-div {
+    padding-top: 10px;
+}
+.grid.container {
+    margin-top: 5em;
+}
+.inputfile {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+}
+.dashboard-section {
+    margin: auto;
+    width: 55%;
+    margin-top: 55px;
+    margin-bottom: 425px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ui.button.perform-analysis {
+    float: left;
+    background-color: #0b0b53;
+    color: white;
+    font-weight: bold;
+}
+.ui.button.perform-analysis:hover,
+.ui.button.perform-analysis:focus {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+.upload-image-display {
+    height: 171px;
+    width: 317px;
+    margin-left: -57px;
+}
+.perform-analysis-button-div {
+    padding-top: 0px;
+    margin-top: 0;
+}
+.users-name-details {
+    padding-left: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #302b2bde;
+}
+.users-info-div {
+    display: flex;
+    height: 100px;
+    width: 405px;
+    margin-left: 36px;
+    margin-top: 36px;
+    padding-top: 19px;
+    align-items: center;
+    justify-content: center;
+}
+.content {
+  font-size: 12px;
+}
+.profile-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 23px;
+    border: 2px solid #cbcbda;
+}
+.ui.inverted.vertical.footer.segment.footer-div {
+  margin-top: 100px;
+}
+.ui.container.footer {
+  height: 195px;
+  margin-top: 43px;
+  padding-bottom: 236px;
+}
+.list-items {
+  font-size: 10px;
+  color: white;
+  list-style-type: none;
+}
+.ui.inverted.header.footer-header {
+  margin-bottom: 10px;
+}
+.ui.inverted.header.footer-header.fbi-header {
+  margin-top: 0px;
+  font-size: 5em;
+  font-weight: bolder;
+  margin-bottom: 0px;
+}
+.seven.wide.column.last-footer-div {
+  margin-left: 60px;
+}
+.ui.inverted.inner-footer {
+  padding-left: 10px;
+}
+.ui.header+p {
+  margin-bottom: 0px;
+}
+p.fbi-bureau-para {
+  font-size: 22px;
+  line-height: 20px;
+  margin-bottom: 7px;
+  color: #fffcfc96;
+  padding-left: 4px;
+}
+.list-items.fbi-logo-and-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.fbi-contact-center {
+  font-size: 15px;
+  color: #fffcfc96;
+  padding-top: 8px;
+  padding-left: 7px;
+}
+.fbi-footer-logo-image {
+  height: 75px;
+  width: 75px;
+  border-radius: 50px;
+  border: 1px solid black;
+  margin-right: 5px;
+}
+.ui.button.logout-button {
+  height: 37px;
+  margin-top: 10px;
+  background-color: #1b1c1d00;
+  color: #ffffffa6;
+  font-weight: lighter;
+  margin-left: 6px;
+}
+.ui.button.logout-button:hover,
+.ui.button.logout-button:focus {
+  background: rgba(255,255,255,.08);
+  color: #fff!important;
+}
+.ui.form.register-form {
+  margin: auto;
+  width: 30%;
+  margin-top: 110px;
+  margin-bottom: 213px;
+}
+.field.checkbox-div {
+  display: flex;
+  padding-top: 1px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 7px;
+  padding-left: 5px;
+}
+.ui.form input[type=checkbox], .ui.form textarea  {
+  margin-top: 3px;
+  margin-right: 4px;
+}
+.ui.button.register-button {
+  height: 41px;
+  width: 129px;
+  background-color: #24495f;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+.ui.button.register-button:hover,
+.ui.button.register-button:focus {
+  color: white;
+  background-color: #183140;
+}
+.ui.message.alert-message {
+  font-size: 1em;
+  display: none;
+  height: 40px;
+  width: 297px;
+  padding-top: 9px;
+  margin-left: 35px;
+  margin-top: 25px;
+}
+.alert-div {
+  padding-top: 4px;
+  height: 50px;
+  font-size: 1em;
+  display: grid;
+  width: 370px;
+  margin-left: 35px;
+  margin-top: 25px;
+}
+input[type="file"] {
+  width: 89px;
+  border: none;
+  height: 22px;
+}
+.swal2-styled.swal2-confirm {
+  background-color: #1861bf;
+}
