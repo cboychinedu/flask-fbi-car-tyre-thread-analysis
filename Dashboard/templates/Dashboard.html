@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Dashboard/css/dashboard.css') }}">
     <title>Dashboard</title>
 </head>
 <body>
@@ -15,43 +16,85 @@
 
     <!-- Adding the main div  -->
     <div class="dashboard-section">
-        <div class="ui segment description-main-div">
-            <img class="upload-image-display" src="{{ url_for('static', filename='Images/car-type-thread-image.jpg')}}" alt="upload-image-display">
-            <div class="upload-image-file-div">
-                <div class="ui message">
-                    <div class="header">Car Tyre Thread Analysis</div>
-                    <div class="content">
-                      Forensic tire tread evidence records and analyzes impressions
-                      of vehicle tire treads for use in legal proceedings to help
-                      prove the identities of persons at a crime scene. Every tire
-                      will show different amounts of tread wear, and different amounts
-                      of damage in the form of tiny cuts and nicks.
+        <section class="sectionOne">
+            <div class="ui segment description-main-div">
+                <img class="upload-image-display" src="{{ url_for('static', filename='Images/car-type-thread-image.jpg')}}" alt="upload-image-display">
+                <div class="upload-image-file-div">
+                    <div class="ui message">
+                        <div class="header">Car Tyre Thread Analysis</div>
+                        <div class="content">
+                          Forensic tire tread evidence records and analyzes impressions
+                          of vehicle tire treads for use in legal proceedings to help
+                          prove the identities of persons at a crime scene. Every tire
+                          will show different amounts of tread wear, and different amounts
+                          of damage in the form of tiny cuts and nicks.
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+    
+    
+            <!-- Adding the upload div -->
+            <div class="ui segment dashboard-main-div">
+                <img class="upload-image" id="upload-image" src="{{ url_for('static', filename='Images/image.png') }}" alt="upload-image" srcset=""> <br /> 
+                <input type="file" class="ui button upload-input" id="imageInput" />
+                <div className="upload-image-file-div">
+                    <span id="uploadImageBtn" for="embedpollfileinput" class="ui green left floated button green-button">
+                        <i class="ui upload icon"></i>
+                        Upload image
+                    </span>
+    
+                </div> <br />
+                    <div class="perform-analysis-button-div">
+                    <button class="ui button perform-analysis" id="perform-analysis"> Perform Analysis </button>
+                </div>
+    
+                <div className="results-div">
+    
+                </div>
+    
+            </div>
+        </section>
 
 
-        <!-- Adding the upload div -->
-        <div class="ui segment dashboard-main-div">
-            <img class="upload-image" id="upload-image" src="{{ url_for('static', filename='Images/image.png') }}" alt="upload-image" srcset=""> <br /> 
-            <input type="file" class="ui button upload-input" id="imageInput" />
-            <div className="upload-image-file-div">
-                <span id="uploadImageBtn" for="embedpollfileinput" class="ui green left floated button green-button">
-                    <i class="ui upload icon"></i>
-                    Upload image
-                </span>
-
-            </div> <br />
-                <div class="perform-analysis-button-div">
-                <button class="ui button perform-analysis" id="perform-analysis"> Perform Analysis </button>
+        <section class="sectionTwo">
+            <div class="ui segment description-main-div">
+                <img class="upload-image-display" src="{{ url_for('static', filename='Images/soundwave.jpg')}}" alt="upload-image-display">
+                <div class="upload-image-file-div">
+                    <div class="ui message">
+                        <div class="header">Deep <span> Learning </span> Audio Classsification</div>
+                        <div class="content">
+                            This project focuses on utilizing deep learning techniques for audio classification, <br> 
+                            specifically for identifying the source of sound waves as either animals or humans. <br> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <!-- Adding the upload div -->
+            <div class="ui segment dashboard-main-div">
+                <img class="upload-image" id="upload-image" src="{{ url_for('static', filename='Images/image.png') }}" alt="upload-image" srcset=""> <br /> 
+                <input type="file" class="ui button upload-input" id="imageInput" />
+                <div className="upload-image-file-div">
+                    <span id="uploadImageBtn" for="embedpollfileinput" class="ui green left floated button green-button">
+                        <i class="ui upload icon"></i>
+                        Upload Sound
+                    </span>
+    
+                </div> <br />
+                    <div class="perform-analysis-button-div">
+                    <button class="ui button perform-analysis" id="perform-analysis"> Perform Analysis </button>
+                </div>
+    
+                <div className="results-div">
+    
+                </div>
+    
             </div>
 
-            <div className="results-div">
-
-            </div>
-
-        </div>
+        </section>
+        
     </div>
 
     <!-- Adding the javascript -->

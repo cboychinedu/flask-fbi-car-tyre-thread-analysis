@@ -149,7 +149,7 @@ body {
     height: 100%;
 }
 .ui.segment.description-main-div {
-    width: 50%;
+    width: 100%;
 }
 .upload-image {
     max-width: 25%;
@@ -241,7 +241,9 @@ input[type="file"] {
     height: 50px;
 }
 .ui.green.left.floated.button.green-button {
-  margin-top: 6px;
+  margin-top: 3px;
+    width: 167px;
+    font-size: 12px;
 }
 .upload-image-file-div {
     padding-top: 10px;
@@ -267,10 +269,13 @@ input[type="file"] {
     align-items: center;
 }
 .ui.button.perform-analysis {
-    float: left;
-    background-color: #0b0b53;
-    color: white;
-    font-weight: bold;
+  float: left;
+  background-color: #0b0b53;
+  color: white;
+  font-weight: bold;
+  margin-top: 6px;
+  width: 168px;
+  font-size: 12px;
 }
 .ui.button.perform-analysis:hover,
 .ui.button.perform-analysis:focus {
@@ -279,9 +284,9 @@ input[type="file"] {
     font-weight: bold;
 }
 .upload-image-display {
-    height: 171px;
-    width: 317px;
-    margin-left: -57px;
+  height: 122px;
+  width: 254px;
+  margin-left: -13px;
 }
 .perform-analysis-button-div {
     padding-top: 0px;
