@@ -39,6 +39,42 @@
         </div>
     </div>
 
+        <!-- Adding the navbar for mobile devices -->
+    <div class="mobileNavbarDiv">
+      <nav class="leftNav">
+          <a href="http://">
+             <div>
+                <img class="fbi-seal-image" src="{{ url_for('static', filename='Home/images/fbi.png')}}" alt="fbi-seal" srcset="">
+             </div>
+          </a>
+      </nav>
+
+      <nav class="rightNav">
+        <div class="dropdown">
+          <a class="dropbtn" id="menuButton">
+            <div class="menuDiv"></div>
+            <div  class="menuDiv"></div>
+            <div  class="menuDiv"></div>
+          </a>
+
+          <!-- Adding the menucontainer  -->
+          <div id="menuContainer">
+            <div class="menuContainerImageDiv">
+              <a href="/dashboard">
+                  <img class="homeLogoMenu" src="{{ url_for('static', filename='Home/images/fbi.png')}}" alt="" srcset="">
+              </a>
+              <div class="mobileNavDiv">
+                <a href="/" class="item"> Home </a>
+                <a href="/dashboard" class="item"> Dashboard </a>
+                <a href="#" class="item"> History </a>
+                <a href="/logout" class="item"> Logout </a>
+              </div>
+          </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
     <!-- Content  -->
     {% block content %} 
     {% endblock %}  
@@ -50,7 +86,7 @@
             <div class="ui container footer">
               <div class="ui stackable inverted divided equal height stackable grid">
                 <div class="three wide column">
-                  <ul class="ui inverted">
+                  <ul class="ui inverted" id="aboutFooter">
                     <li class="list-items"> <h4 class="ui inverted header footer-header">About</h4> </li>
                     <li class="list-items"> <a to="#" class="item sitemap">Mission & Priorities</a> </li>
                     <li class="list-items"> <a to="#" class="item contact-us">Leadership & Structure</a> </li>
@@ -76,7 +112,7 @@
                         <img src="{{ url_for('static', filename='Images/fbi.png')}}" class="fbi-footer-logo-image" alt="fbi-footer-logo-image"/>
                       </div>
                       <h1 class="ui inverted header footer-header fbi-header">FBI</h1>
-                      <p class="fbi-bureau-para"> FEDERAL BUREAU <br/> OF INVESTIGATION </p>
+                      <p class="fbi-bureau-para" id="fbiPara"> FEDERAL BUREAU <br/> OF INVESTIGATION </p>
                     </li>
                     <li class="list-items">
                       <p class="fbi-contact-center"> FBI.gov Contact Center </p>
@@ -88,5 +124,7 @@
         </div>
     </footer>
     
+    <!-- Adding javascript -->
+    <script src="{{ url_for('static', filename='Home/javascript/navigator.js')}}"></script>
 </body>
 </html>

@@ -67,7 +67,7 @@ submitButton.addEventListener("click", (event) => {
    }; 
 
    // Setting the url 
-   const url = "http://localhost:5001"; 
+   const url = "/"; 
 
    // Making the fetch request to the backend server 
    fetch(url, {

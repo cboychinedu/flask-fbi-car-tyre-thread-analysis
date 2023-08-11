@@ -75,4 +75,5 @@ def override_url_for():
 
 # Running the server 
 if __name__ == "__main__": 
-    app.run(port=5001, host='localhost', debug=False)
+    # app.run(port=5000, host='localhost', debug=True)
+    app.run(port=5000, host="192.168.43.95", debug=True)

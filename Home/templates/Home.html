@@ -12,7 +12,7 @@
                     <img src="{{ url_for('static', filename='Images/fbi-badge.png') }}" class="fbi-badge-image" alt="fbi-badge-image">
                 </div>
                 <div class="center-div">
-                    <form class="ui form">
+                    <form class="ui form mobileForm">
                         <div class="field">
                             <label class="label-tag">Email Address </label>
                             <input placeholder="Email Address... " id="email" class="email" />
@@ -24,7 +24,7 @@
                         <div class="field">
                             <div class="ui checkbox">
                                 <input type="checkbox" class="hidden" readonly="" tabindex="0"/>
-                                <label class="label-tag">I agree to the Terms and Conditions</label>
+                                <label class="label-tag" id="mobileLabelTag">I agree to the Terms and Conditions</label>
                             </div>
                         </div>
                         <button class="ui button submit-button" type="submit" id="submit-btn">Submit</button>

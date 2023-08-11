@@ -97,7 +97,7 @@ performAnalysisBtn.addEventListener("click", (event) => {
     }
 
     // Setting the url 
-    const url = 'http://localhost:5001/dashboard/perform-analysis'; 
+    const url = '/dashboard/perform-analysis'; 
 
     // then clear the 'localStorage' storage 
     fetch(url, {

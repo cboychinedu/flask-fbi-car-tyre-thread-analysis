@@ -92,7 +92,7 @@ registerBtn.addEventListener("click", (event) => {
         }; 
 
         // Setting the url 
-        const url = "http://localhost:5001/register"
+        const url = "/register"
 
         // Making the fetch request to the backend server 
         fetch(url, {
