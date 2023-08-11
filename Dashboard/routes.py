@@ -58,7 +58,7 @@ def upload():
         imageUploadDir = os.path.sep.join([imageUploadDir, filename])
 
         # Creating the image url 
-        imageUrl = f"http://localhost:5001/{imageUploadDir}"; 
+        imageUrl = f"/{imageUploadDir}"; 
 
         # Saving the image to disk 
         image.save(imageUploadDir)

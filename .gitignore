@@ -7,6 +7,7 @@
 # ML model 
 Dashboard/MachineLearningModel/finalized_model.sav
 /Dashboard/MachineLearningModel/finalized_model.sav
+Dashboard/MachineLearningModel/model.tar
 
 # Logs 
 requests.log
