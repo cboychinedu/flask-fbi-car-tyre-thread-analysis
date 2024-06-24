@@ -1,6 +1,8 @@
-Flask 
+Flask
 flask_cors
-bcrypt 
+bcrypt
 python-dotenv
 bcrypt
 pymongo
+mongo
+opencv-python

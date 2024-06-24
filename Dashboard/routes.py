@@ -8,7 +8,7 @@ from flask import Blueprint
 from datetime import datetime
 from flask import session, redirect 
 from mongo import MongoDB 
-from flask import render_template, url_for 
+from flask import render_template, jsonify, url_for 
 from Dashboard.MachineLearningModel.main import Analyze
 
 # Creating the blueprint object 
@@ -33,7 +33,7 @@ def performAnalysis():
     result = analyze.perform_analysis(); 
 
     # returning the results 
-    return result; 
+    return jsonify(result); 
 
 # Creating a route for uploading the image 
 @dashboard.route('/upload', methods=['POST'])
@@ -73,7 +73,7 @@ def upload():
         }
 
         # Sending back the image data to the client 
-        return data; 
+        return jsonify(data); 
     
     # Else if the image wasn't saved, execute the block 
     # of code below 
@@ -88,7 +88,7 @@ def upload():
         }
  
         # Sending back the data to the client 
-        return data; 
+        return jsonify(data); 
 
 # Creating a route for getting the logged in user's details 
 @dashboard.route('/get-users-details', methods=['POST', 'GET'])
@@ -109,10 +109,10 @@ def GetUsers():
         # If the database value returns a None type, execute the block 
         # of code below 
         if database_data == None: 
-            return { "status": "error", "message": "Error retriving the user's information."}
+            return jsonify({ "status": "error", "message": "Error retriving the user's information."})
         
         # Return the data 
-        return database_data; 
+        return jsonify(database_data); 
 
     # If the user is not logged in, execute the 
     # block of code below 
@@ -120,7 +120,7 @@ def GetUsers():
         # Create an error message, and send it back to the 
         # client 
         errMessage = { 'status': 'error', 'message': 'User not logged in'}; 
-        return errMessage;  
+        return jsonify(errMessage);  
 
 
 # Creating the dashboard home page 

@@ -1,6 +1,8 @@
 {% extends 'base.html' %} 
 {% block content %} 
 
+<script src="{{ url_for('static', filename='Register/javascript/ajax-min.js')}}"></script>
+
 <body>
     <div class="ui fluid container-heading-register">
         <div class="center-div"> 
@@ -36,6 +38,7 @@
 
     <!-- Adding the javascript -->
     <script src="{{ url_for('static', filename='Register/javascript/register.js')}}"></script>
+
 
 {% endblock %}
 </body>

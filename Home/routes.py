@@ -8,7 +8,7 @@ from base64 import b64encode
 from flask import request 
 from flask import Blueprint 
 from datetime import datetime 
-from flask import session, flash, redirect
+from flask import session, flash, jsonify, redirect
 from mongo import MongoDB
 from flask import render_template, url_for
 
@@ -38,12 +38,12 @@ def HomePage():
 
         # Getting the user's data by connecting to the Mongodb database server 
         db.connect('mongodb://localhost:27017/', 'car_tyre_analysis')
-        database_data = db.retrieve_data('users', email=email)
+        database_data = db.retrieve_data('users', email=email) 
 
         # If the database value returns a None type, execute the 
         # block of code below. 
         if database_data == None: 
-            return { "message": "User not found on the database", "status": "error"}, 500; 
+            return jsonify({ "message": "User not found on the database", "status": "error"}), 500
 
         # Converting the json string, into a json object using the json module 
         database_data = json.loads(database_data.json);
@@ -69,7 +69,7 @@ def HomePage():
                 }
 
                 # Sending the error message 
-                return successMessage; 
+                return jsonify(successMessage); 
 
 
             # If the password condition returned a False value, exeucte the 
@@ -84,10 +84,10 @@ def HomePage():
                 }
 
                 # Sending back the error message 
-                return errorMessage; 
+                return jsonify(errorMessage); 
             
             # 
-            return {"message": "User found", "PasswordValidation": passwordCondition}; 
+            return jsonify({"message": "User found", "PasswordValidation": passwordCondition}), 404
 
         # Else 
         else: 
@@ -99,7 +99,7 @@ def HomePage():
             }
         
             # Returning the database data 
-            return errorMessage; 
+            return jsonify(errorMessage); 
 
 
     else: 
