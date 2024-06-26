@@ -46,41 +46,41 @@ def clear_trailing():
     if rp != '/' and rp.endswith('/'):
         return redirect(rp[:-1])
 
-# # Adding the session configurations
-# @app.before_request
-# def make_session_permanent():
-#     # Setting the server message
-#     session.permanent = True
-#     app.permanent_session_lifetime = timedelta(hours=45)
-#
-#
-# # Handling custom error pages
-# @app.errorhandler(404)
-# def page_not_found(e):
-#     # Execute this route if the user navigates to a route that does
-#     # not exist
-#     return render_template('page_not_found.html'), 404;
-#
-# # Handling the error request 500
-# @app.errorhandler(500)
-# def internal_server_error(e):
-#     # Execute this route if the request generated gives an internal server error
-#     return render_template('bad_request.html'), 500;
-#
-# # Creating a function called dated url for tracking the changes made
-# def dated_url_for(endpoint, **values):
-#     if endpoint == 'static':
-#         filename = values.get('filename', None)
-#         if filename:
-#             file_path = os.path.join(app.root_path,
-#                                  endpoint, filename)
-#             values['q'] = int(os.stat(file_path).st_mtime)
-#     return url_for(endpoint, **values)
-#
-# # Adding functions for updating the web application on reload
-# @app.context_processor
-# def override_url_for():
-#     return dict(url_for=dated_url_for) 
+# Adding the session configurations
+@app.before_request
+def make_session_permanent():
+    # Setting the server message
+    session.permanent = True
+    app.permanent_session_lifetime = timedelta(hours=45)
+
+
+# Handling custom error pages
+@app.errorhandler(404)
+def page_not_found(e):
+    # Execute this route if the user navigates to a route that does
+    # not exist
+    return render_template('page_not_found.html'), 404;
+
+# Handling the error request 500
+@app.errorhandler(500)
+def internal_server_error(e):
+    # Execute this route if the request generated gives an internal server error
+    return render_template('bad_request.html'), 500;
+
+# Creating a function called dated url for tracking the changes made
+def dated_url_for(endpoint, **values):
+    if endpoint == 'static':
+        filename = values.get('filename', None)
+        if filename:
+            file_path = os.path.join(app.root_path,
+                                 endpoint, filename)
+            values['q'] = int(os.stat(file_path).st_mtime)
+    return url_for(endpoint, **values)
+
+# Adding functions for updating the web application on reload
+@app.context_processor
+def override_url_for():
+    return dict(url_for=dated_url_for) 
 
 # Running the server
 if __name__ == "__main__":
